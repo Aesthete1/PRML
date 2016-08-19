@@ -1,0 +1,8 @@
+$$
+\begin{aligned}
+  &\frac{\partial E(\mathbf{w})}{\partial w_i} = \sum_{n = 1}^N(\sum^M_{j=0}w_jx_n^j - t_n)x_n^i = 0\\
+  &\rightarrow \sum^N_{n=1}(\sum^M_{j=0}(x_n)^{i+j}w_j - x_n^it_n) = 0\\
+  &\rightarrow \sum^N_{n=1}\sum^M_{j=0}(x_n)^{i+j}w_j - \sum^N_{n=1}(x_n)^it_n = 0\\
+  &\rightarrow \sum^M_{j = 0}\sum^N_{n=1}(x_n)^{i+j}w_j = \sum^N_{n=1}(x_n)^it_n
+\end{aligned}
+$$

@@ -1,0 +1,15 @@
+\fra{\partial lnp(\mathbf{x}|\mu, \sigma^2)}{\parrtial \mu} = \frac{1}{\sigma^2}\sum^N_{n=1}(x_n-\mu) \rightarrow \mu_{ML} = \frac{1}{N}\sum^N_{n=1}x_n
+
+\frac{\partial ln p(\mathbf{x}|\mu, \sigma^2)}{\partial \sigma^2} = -\frac{1}{2}\sum^N_{n=1}(X_n-\mu)^2\times (-2\times \frac{1}{\sigma^3}) - \frac{N}{2}\times \frac{2\sigma}{\sigma^2} = 0 \rightarrow \sigma^2_{ML} = \frac{1}{N}\sum^N_{n=2}(x_n - \mu_{ML})^2
+
+$$\frac{\partial p(\mathbf{t}|\mathbf{x},w,\beta )}{\partial \beta} = -\frac{1}{2}\sum^N_{n=1}\{y(x_nm,\mathbf{w}-t_n)^2 + \frac{N}{2\beta} = 0 \rightarrow \frac{1}{\beta_{ML} = \frac{1}{N}\sum^N_{n=1}\{y(x_n,\mathbf{w}_{ML}) - t_n\}^2\}$$
+
+$$
+\begin{aligned}
+p(C_k|\mathbf{x}_I, \mathbf{x}_B)& \propto p(\mathbf{x}_I,\mathbf{x}_B|C_k)p(C_k)\\
+&\propto p(\mathbf{x}_I|C_k)p(\mathbf{x}_B|C_k)p(C_k)\\
+& = \frac{p(C_k|\mathbf{x}_I)p(x_I)}{p(C_k)}\cdot \frac{p(C_k|\mathbf{x}_B)p(x_B)}{p(C_k)}p(C_k)\\
+&\propto \frac{p(C_k|\mathbf{x}_I)}{p(C_k)}\cdot \frac{p(C_k|\mathbf{x}_B)}{p(C_k)}p(C_k)\\
+&\propto \frac{p(C_k|\mathbf{x}_I)p(C_k|\mathbf{x}_B)}{p(C_k)}
+\end{aligned}
+$$

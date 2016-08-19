@@ -1,0 +1,9 @@
+$$
+\begin{aligned}
+  F[y(x) + \epsilon \eta(x)] &= F[y(x)] + \epsilon \int \{\frac{\partial G}{\partial y}\eta (x)dx + \frac{\partial G}{\partial y'}\eta ' (x)\}dx + \mathcal{O}(\epsilon ^ 2)\\
+   &= F[y(x)] + \epsilon \int \frac{\partial G}{\partial y'}\eta(x)dx + \epsilon \int \frac{\partial G}{\partial y'}\eta '(x)dx + \frac{\partial G}{\partial y'}\eta ' (x)\}dx + \mathcal{O}(\epsilon ^ 2)\\
+   &= F[y(x)] + \epsilon \int \frac{\partial G}{\partial y'}\eta(x)dx + \epsilon [\frac{\partial G}{\partial y'}\eta (x) - \int \frac{d}{dx}(\frac{\partial G}{\partial y'})\eta(x)dx] + \frac{\partial G}{\partial y'}\eta ' (x)\}dx + \mathcal{O}(\epsilon ^ 2)\\
+   &= F[y(x)] + \epsilon \int \frac{\partial G}{\partial y'}\eta(x)dx - \epsilon \int \frac{d}{dx}(\frac{\partial G}{\partial y'})\eta(x)dx + \frac{\partial G}{\partial y'}\eta ' (x)\}dx + \mathcal{O}(\epsilon ^ 2)\\
+   &= F[y(x)] + \epsilon \int \{\frac{\partial G}{\partial y'}\eta(x)dx - \frac{d}{dx}(\frac{\partial G}{\partial y'})\} \eta(x)dx + \mathcal{O}(\epsilon ^ 2)\\
+\end{aligned}
+$$

@@ -1,0 +1,77 @@
+$$
+\begin{aligned}
+  H &= \lim\limits_{N\to \infty}\frac{1}{N}lnN!-\frac{1}{N}\sum_i \ln n_i!\\
+  & = \lim\limits_{N\to \infty}\frac{1}{N}(N\ln N - N)-\frac{1}{N}\sum_i (n_i\ln n_i - n_i)\\
+  & = \lim\limits_{N\to \infty} \ln N - 1 - \frac{1}{N}\sum_i n_i \ln n_i + \frac{\sum_i n_i}{N}\\
+  & = \lim\limits_{N\to \infty} \ln N - 1 - \frac{1}{N}\sum_i n_i \ln n_i + 1\\
+  & = \lim\limits_{N\to \infty} -(\frac{1}{N}\sum_i n_i \ln n_i -\ln N)\\
+  & = \lim\limits_{N\to \infty} -(\sum_i \frac{n_i}{N}\ln n_i - \sum_i \frac{n_i}{N}\ln N)\\
+  & = \lim\limits_{N\to \infty} -\sum_i \frac{n_i}{N}\ln(\frac{n_i}{N})
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+  H[x] = -\sum_M p(x)\ln p(x) = \sum_M p(x)\ln \frac{1}{p(x)} \leqslant \ln \sum_M p(x)\frac{1}{p(x)} = \ln M
+\end{aligned}
+$$
+
+$$
+F[p(x)] = \int p(x)f(x)dx
+$$
+
+$$
+S[p(x)] = \int p(x)\ln p(x)dx
+$$
+
+$$
+F[p(x)+ \epsilon \eta(x)] = \int p(x)f(x)dx + \epsilon \int f(x) \eta(x)dx
+$$
+
+$$
+\frac{\delta F}{\delta p(x)} = f(x)
+$$
+
+$$
+\begin{aligned}
+S[p(x) + \epsilon \eta (x)] &= \int p(x)\ln p(x)dx + \epsilon \{\int \frac{\partial G}{\partial p(x)} \eta(x)dx + \int \frac{\partial G}{\partial \ln p(x)} \eta(x)dx\} + \mathcal{O}(\epsilon^2)\\
+& = \int p(x)\ln p(x)dx + \epsilon \{\int \ln p(x) \eta(x)dx + \int p(x)\frac{1}{p(x)} \eta(x)dx\} + \mathcal{O}(\epsilon^2)\\
+& = \int p(x)\ln p(x)dx + \epsilon \int [\ln p(x) + 1]\eta(x)dx + \mathcal{O}(\epsilon^2)
+\end{aligned}
+$$
+
+$$
+\frac{\delta S}{\delta p(x)} = \ln p(x) + 1
+$$
+
+$$
+-\ln p(x) - 1 + \lambda_1 + \lambda_2 x + \lambda_3(x - \mu)^2 = 0
+$$
+
+$$
+p(x) = exp\{-1 + \lambda_1 \lambda_2 x + \lambda_3(x - \mu)^2\}
+$$
+
+$$
+\int_{-\infty}^\infty exp\{-1+\lambda_1 + \lambda_2x + \lambda_3(x-\mu)^2\}dx = 1
+$$
+
+$$
+\int_{-\infty}^\infty  exp\{-1+\lambda_1 + \lambda_2x + \lambda_3(x-\mu)^2\} xdx = \mu
+$$
+
+$$
+\int_{-\infty}^\infty (x - \mu)^2 exp\{-1+\lambda_1 + \lambda_2x + \lambda_3(x-\mu)^2\}dx = \sigma^2
+$$
+
+$$
+\begin{aligned}
+  p(x) &= \frac{1}{(2\pi \sigma^2)^{1/2}}exp\{\frac{(x-\mu)^2}{2\sigma ^2}\}\\
+& = exp\{-\frac{(x-\mu)^2}{2\sigma^2} - \frac{1}{2}]\ln (2\pi \sigma^2)\}\\
+& = exp\{-\frac{1}{2\sigma^2}x^2 + \frac{\mu}{\sigma^2}x - \frac{\mu ^ 2}{2\sigma^2} - \frac{1}{2}\ln (2\pi \sigma^2)\}
+\end{aligned}
+$$
+
+$\lambda_3 = -\frac{1}{2\sigma^2}$
+$-2\lambda_3 + \lambda_2 = \frac{\mu}{\sigma^2}$
+$\lambda_3 \mu^2 - 1 = -\frac{\mu^2}{2\sigma^2}-\frac{1}{2}\ln (2\pi \sigma^2)$
