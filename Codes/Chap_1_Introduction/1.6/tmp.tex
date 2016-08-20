@@ -75,3 +75,33 @@ $$
 $\lambda_3 = -\frac{1}{2\sigma^2}$
 $-2\lambda_3 + \lambda_2 = \frac{\mu}{\sigma^2}$
 $\lambda_3 \mu^2 - 1 = -\frac{\mu^2}{2\sigma^2}-\frac{1}{2}\ln (2\pi \sigma^2)$
+
+$$
+\begin{aligned}
+  h[x] &= -\int p(x)\ln p(x)dx\\
+& = -\int p(x)\Big(-\frac{1}{2}\ln (2\pi \sigma^2) - \frac{(x-\mu)^2}{2\sigma^2}\Big)dx\\
+& = \frac{1}{2}(\ln(2\pi \sigma^2) + \frac{1}{\sigma ^2}\int p(x)(x-\mu)^2dx)\\
+& = \frac{1}{2}[\ln (2\pi \sigma^2) + 1]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+  H[x,y] &= -\int \int p(x,y)\ln p(x,y)dxdy\\
+  & = -\int \int p(x,y)\ln [p(x)p(y|x)]dxdy\\
+  & = -\int \int p(x,y)\ln p(x)dxdy - \int \int p(x,y)\ln p(y|x)dxdy\\
+  & = -\int p(x)\ln p(x)dx - \int \int p(x,y)\ln p(y|x)dxdy\\
+  & = H[x] + H[y|x]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+  I[x,y] &= -\iint p(x,y)\ln [\frac{p(x)p(y)}{p(x,y)}]dxdy\\
+  & = -\iint p(x,y)\ln [\frac{p(x)p(y)}{p(y)p(x|y)}]dxdy\\
+  & = -\iint p(x,y) \ln [\frac{p(x)}{p(x|y)}]dxdy\\
+  & = -\iint p(x,y)\ln p(x)dxdy + \iint p(x,y)\ln p(x|y)dxdy\\
+  & = -\int p(x)\ln p(x)dx + \iint p(x,y)\ln p(x|y)dxdy\\
+  & = H[x] - H[x|y]
+\end{aligned}
+$$
